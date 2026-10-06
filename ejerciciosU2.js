@@ -57,10 +57,9 @@ function numMenosRepetido(arrayNums) {
     return resultado;
   }
 
-  let menosRepetido = arrayNums[0];
   let arrayRepetidos = new Map();
 
-  for (let indice = 0; indice < arrayNumeros.length; indice++) {
+  for (let indice = 0; indice < arrayNums.length; indice++) {
     const clave = arrayNums[indice];
 
     if (arrayRepetidos.has(arrayNums[indice])) {
@@ -71,10 +70,22 @@ function numMenosRepetido(arrayNums) {
     }
   }
 
-  arrayRepetidos.forEach((clave, valor) => {
-    console.log(`${valor} --- ${clave}`);
+  let minimo = Number.MAX_VALUE;
+  let numeroMenosRepetido = Number.MAX_VALUE;
+
+  arrayRepetidos.forEach((valor, clave) => {
+    //console.log(`${clave} --- ${valor}`);
+    if (valor < minimo) {
+      minimo = valor;
+      numeroMenosRepetido = clave;
+    } else if (valor === minimo && clave < numeroMenosRepetido) {
+      minimo = valor;
+      numeroMenosRepetido = clave;
+    }
   });
+
+  return numeroMenosRepetido;
 }
 
 const arrayNumeros = [4, 2, 8, 2, 15, 8, 4, 23, 42, 8, 15, 4];
-numMenosRepetido(arrayNumeros);
+console.log(numMenosRepetido(arrayNumeros));
