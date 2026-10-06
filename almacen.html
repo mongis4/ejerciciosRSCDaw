@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Almacen bodega</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/almacen.css" />
+    <link rel="stylesheet" href="css/dialogs.css" />
+  </head>
+
+  <body>
+    <main>
+      <nav id="menu-lateral"></nav>
+      <div>
+        <h1>Almacen</h1>
+        <p>Informacion sobre depositos/ litros etc</p>
+        <div id="divBotones">
+          <button id="botonNuevoDeposito">+ Nuevo depósito</button>
+          <button id="botonNuevaBarrica">+ Nueva barrica</button>
+          <button id="botonTrasiego">⇄ Trasiego</button>
+          <button id="botonEmbotellado">Embotellado</button>
+          <button id="botonEntradaUva">Entrada Uva</button>
+          <button id="botonEntradaMostoVino">Entrada Mosto/Vino</button>
+        </div>
+        <h2>Depósitos</h2>
+
+        <div id="contenedor-depositos"></div>
+        <br />
+        <h2>Barricas</h2>
+        <div id="contenedor-barricas"></div>
+      </div>
+    </main>
+
+    <div id="dialog-trasiego"></div>
+
+    <dialog id="dialogNuevoDeposito">
+      <h3>+Nuevo depósito</h3>
+      <form id="formNuevoDeposito">
+        <label>Número/ ID</label><br />
+        <input type="text" id="inputIdNuevoDeposito" /><br /><br />
+        <label>Capacidad (Litros)</label><br />
+        <input type="number" id="inputCapacidadNuevoDeposito" /><br /><br />
+        <label>Material</label><br />
+        <select id="selectMaterialNuevoDeposito">
+          <option value="Elige una opción">Elige una opción</option>
+          <option value="Hormigon">Hormigon</option>
+          <option value="Acerno inoxidable">Acero inoxidable</option>
+          <option value="Poliester">Poliester</option>
+          <option value="Otros materiales">Otros materiales</option></select
+        ><br /><br />
+        <label>Observaciones</label><br />
+        <textarea id="textareaNuevoDeposito"></textarea><br /><br />
+        <button type="button" id="btnConfirmarNuevoDeposito">Confirmar</button>
+        <button type="button" id="btnCancelarNuevoDeposito">Cancelar</button>
+      </form>
+    </dialog>
+
+    <dialog id="dialogNuevaBarrica">
+      <h3>+Nueva barrica</h3>
+      <form id="formNuevaBarrica">
+        <label for="inputIdBarrica">Número/ ID: </label><br />
+        <input type="text" id="inputIdBarrica" /><br /><br />
+        <label for="inputCapacidadBarrica">Capacidad (Litros): </label><br />
+        <input type="number" id="inputCapacidadBarrica" /><br /><br />
+        <label>Tipo madera</label><br />
+        <select id="selectTipoMaterialBarrica">
+          <option value="Elige una opción">Elige una opción</option>
+          <option value="Roble francés">Roble francés</option>
+          <option value="Roble americano">Roble americano</option>
+          <option value="Roble europeo">Roble europeo</option>
+          <option value="Otros">Otros</option></select
+        ><br /><br />
+        <label>Observaciones</label><br />
+        <textarea id="textareaNuevaBarrica"></textarea><br /><br />
+        <button type="button" id="btnConfirmarNuevaBarrica">Confirmar</button>
+        <button type="button" id="btnCancelarNuevaBarrica">Cancelar</button>
+      </form>
+    </dialog>
+
+    <dialog id="dialogEntradaMostoVino">
+      <h3>Entrada Mosto/ Vino</h3>
+      <form id="formEntradaMostoVino">
+        <div id="divInteriorEntradaMostoVino">
+          <div>
+            <label for="inputFechaEntradaMostoVino">Fecha *</label><br />
+            <input type="date" id="inputFechaEntradaMostoVino" /><br /><br />
+            <label>Ticket / Albarán / Factura *</label><br />
+            <input type="text" id="inputIdTicketEntradaMostoVino" /><br /><br />
+            <label>Clasificación 553 *</label><br />
+            <select id="select553EntradaMostoVino">
+              <option value="Existencia inicial">Existencia inicial</option>
+              <option value="Operaciones interiores">
+                Operaciones interiores
+              </option>
+              <option value="Resto UE">Resto UE</option>
+              <option value="Importacion">Importacion</option></select
+            ><br /><br />
+            <label>Origen Empresa / Bodega *</label><br />
+            <input type="text" id="inputOrigenEntradaMostoVino" /><br /><br />
+            <label>Zona vitícola</label><br />
+            <input type="text" id="inputZonaViticola" /><br /><br />
+            <label>Tipo *</label><br />
+            <select id="selectTipoEntradaMostoVino">
+              <option value="VINO">VINO</option>
+              <option value="VINO CON DOP">VINO CON DOP</option>
+              <option value="MOSTO">MOSTO</option></select
+            ><br /><br />
+            <label>Calificado / No calificado</label><br />
+            <select id="selectCalificado">
+              <option value="No calificado">No calificado</option>
+              <option value="Calificado">Calificado</option></select
+            ><br /><br />
+            <label>DOP (si Calificado)</label><br />
+            <input type="text" id="inputDopEntradaMostoVino" /><br /><br />
+            <label>Observaciones</label><br />
+            <input
+              type="text"
+              id="inputObservacionesEntradaMostoVino"
+            /><br /><br />
+          </div>
+          <div>
+            <label>Color *</label><br />
+            <select id="selectColor">
+              <option value="BLANCO">BLANCO</option>
+              <option value="TINTO">TINTO</option>
+              <option value="ROSADO">ROSADO</option></select
+            ><br /><br />
+            <label>Añada *</label><br />
+            <input type="number" id="selectAnada" /><br /><br />
+            <label>Variedad</label><br />
+            <input type="text" id="inputVariedadEntradaMostoVino" /><br />
+            <button type="button" id="btnAñadirVariedadEntradaMostoVino">
+              + Añadir</button
+            ><br />
+            <p id="listaVariedadesEntradaMostoVino"></p>
+            <label>Cantidad (Litros) *</label><br />
+            <input
+              type="number"
+              id="cantidadLitrosEntradaMostoVino"
+            /><br /><br />
+            <label>Grado adquirido</label><br />
+            <input
+              type="number"
+              id="gradoAdquiridoEntradaMostoVino"
+            /><br /><br />
+            <label>Grado total</label><br />
+            <input type="number" id="gradoTotalEntradaMostoVino" /><br /><br />
+            <label>Depósito destino *</label><br />
+            <select id="selectDestino"></select
+            ><br /><br />
+          </div>
+        </div>
+      </form>
+      <div class="divBotonesDialog">
+        <button type="button" id="btnAceptarEntradaMostoVino">Aceptar</button>
+        <button type="button" id="btnCancelarEntradaMostoVino">Cancelar</button>
+      </div>
+    </dialog>
+
+    <dialog id="dialogConfirmacion">
+      <p id="textoEnConfrimacion"></p>
+      <br /><br />
+      <button type="button" id="btnAceptarConfirmacion">Aceptar</button>
+      <button type="button" id="btnCancelarConfirmacion">Cancelar</button>
+    </dialog>
+
+    <dialog id="dialogMensajeFinal">
+      <p id="textoEnDialogMensajeFinal"></p>
+      <br /><br />
+      <button type="button" id="btnAceptarMensajeFinal">Aceptar</button>
+    </dialog>
+
+    <script src="almacen.js"></script>
+  </body>
+</html>
