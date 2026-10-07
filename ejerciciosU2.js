@@ -328,3 +328,80 @@ const numDePrueba = 23;
 console.log(
   `El número ${numDePrueba} tiene ${calcularNumBits(numDePrueba)} bits`,
 );
+
+/* -------------------------------------------------------*/
+
+/* ------ Ejercicio 11 conjetura de Bachet ---------------*/
+
+function calcularNumsBachet(numero) {
+  //buscar la raiz cuadrada que no se pase del numero
+
+  let copiaNum = numero;
+  let resultado = 0;
+  let arrayNums = new Array();
+
+  while (copiaNum !== resultado) {
+    let raizCuadradaBaja = Math.floor(Math.sqrt(copiaNum));
+    let potencia = Math.pow(raizCuadradaBaja, 2);
+    resultado += potencia;
+    copiaNum = copiaNum - potencia;
+    arrayNums.push(raizCuadradaBaja);
+
+    if (resultado === numero) {
+      arrayNums.length < 4 ? arrayNums.push(0) : "";
+      return arrayNums;
+    }
+  }
+  return "No se han encontrado los numeros";
+}
+
+const minumero = 23; //no funciona bien
+console.log(
+  `El conjunto de numeros Brachet es: ${calcularNumsBachet(minumero)}`,
+);
+
+/* -------------------------------------------------------*/
+
+/* ------ Ejercicio 12 Colorear triángulo ----------------*/
+
+function trianguloColores(entrada) {
+  let nextLinea = entrada.toUpperCase();
+  let nuevaLinea = nextLinea;
+  let imprimirBien = "";
+
+  while (nuevaLinea.length > 1) {
+    nextLinea = nuevaLinea;
+    nuevaLinea = "";
+    imprimirBien = "";
+
+    for (let i = 0; i < nextLinea.length - 1; i++) {
+      const esta = nextLinea[i];
+      const sigu = nextLinea[i + 1];
+      let color = "";
+      if (esta === sigu) {
+        color = esta;
+      } else if (
+        (esta === "R" && sigu === "G") ||
+        (esta === "G" && sigu === "R")
+      ) {
+        color = "B";
+      } else if (
+        (esta === "B" && sigu === "G") ||
+        (esta === "G" && sigu === "B")
+      ) {
+        color = "R";
+      } else if (
+        (esta === "B" && sigu === "R") ||
+        (esta === "R" && sigu === "B")
+      ) {
+        color = "G";
+      }
+      imprimirBien = imprimirBien + color + " ";
+      nuevaLinea += color;
+    }
+    console.log(`${imprimirBien} `);
+  }
+}
+
+const miRgb = "RRGBRGBB";
+trianguloColores(miRgb);
