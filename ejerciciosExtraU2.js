@@ -1,3 +1,13 @@
+/* ----------------------------------------------------------------------------*/
+
+/* ------ Ejercicio 2 Subcadena más Larga sin Caracteres Repetidos ------------*/
+
+function encontrarSubcadena(cadena) {
+  //recorrer y usar indexOf
+}
+
+const cadena = "caracteres";
+
 /* -------------------------------------------------------*/
 
 /* ------ Ejercicio 3 Contenedor con mas agua ------------*/
@@ -59,3 +69,7 @@ const numerosTrios = [2, 7, -2, 1, 8, 4, -3, 9, 5, -12];
 console.log(
   `Las coincidencias de trios únicos en el array: ${numerosTrios} son: ${calcularTrioPerfecto(numerosTrios)}`,
 );
+
+/* -------------------------------------------------------*/
+
+/* ---------- Ejercicio 5 Fusionar Intervalos ------------*/
