@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="formulario.js" defer type="module"></script>
+    <link rel="stylesheet" href="formulario.css" />
+  </head>
+  <body>
+    <main>
+      <div id="contenedor-form">
+        <header><h1>Agenda</h1></header>
+        <form id="id-form" action="" method="get">
+          <label for="idNombre">Introduce tu nombre</label>
+          <input type="text" id="idNombre" autocomplete="name" />
+          <label for=" idApellido">Introduce tu apellido: </label>
+          <input type="text" id="idApellido" autocomplete="family-name" />
+          <label for=" idEdad">Introduce tu fecha de nacimiento: </label>
+          <input type="date" id="idEdad" autocomplete="bday" />
+          <label for=" idLocalización">Localización: </label>
+          <input
+            type="text"
+            id="idLocalización"
+            autocomplete="street-address"
+          />
+          <label for=" idEmail">Email: </label>
+          <input type="text" id="idEmail" autocomplete="email" />
+          <input type="submit" value="Send Request" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+form {
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 25%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contenedor-form {
+  border: 2px solid grey;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
