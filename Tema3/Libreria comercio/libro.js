@@ -5,4 +5,8 @@ export class Libro extends Publicacion {
     super(titulo, autor, paginas);
     this.isbn = isbn;
   }
+
+  getIsbn() {
+    return this.isbn;
+  }
 }
