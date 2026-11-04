@@ -1,0 +1,36 @@
+#contenedor-listado {
+  border: 2px solid rgb(161, 161, 161);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contenedor-listado {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+}
+
+table {
+  padding: 10px;
+  min-width: 200px;
+}
+
+tr td {
+  border: 1px solid black;
+  padding: 5px;
+}
+th {
+  background-color: rgb(140, 140, 248);
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#tabla-lista {
+  text-align: center;
+}
