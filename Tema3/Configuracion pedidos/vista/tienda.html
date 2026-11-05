@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/tienda.css" />
+    <script src="../techlab.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Techlab</h1>
+        <h2>Tu tienda de productos informáticos</h2>
+      </header>
+      <section>
+        <article>
+          <h3>Datos del solicitante</h3>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" />
+
+          <h3>Elige un producto</h3>
+
+          <div id="div-productos">
+            <div><img src="img/pc.png" alt="Pc" /></div>
+            <div><img src="img/monitor.png" alt="Monitor" /></div>
+            <div><img src="img/perifericos.png" alt="Perifericos" /></div>
+          </div>
+          <label for="producto-elegido: ">Producto elegido: </label>
+          <input
+            type="text"
+            name="producto-elegido"
+            id="input-producto-elegido"
+          />
+          <button type="button" id="btn-limpiar-producto">Limpiar</button>
+
+          <h3>Opciones adicionales</h3>
+
+          <div id="div-adicionales">
+            <div>
+              <label for="cantidad">Cantidad</label>
+              <input
+                type="number"
+                name="adicionales"
+                id="cantidad"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div>
+              <label for="entrega">Entrega en aula: </label>
+              <label for="entrega"
+                ><input
+                  type="radio"
+                  value="si"
+                  name="entrega"
+                  id="entrega-aula"
+                />Si</label
+              >
+              <label for="entrega"
+                ><input
+                  type="radio"
+                  value="no"
+                  name="entrega"
+                  id="entrega-aula"
+                />No</label
+              >
+            </div>
+            <div>
+              <label for="label-prioridad">Indica la prioridad: </label><br />
+              <label for="prioridad"
+                ><input
+                  type="radio"
+                  value="baja"
+                  name="prioridad"
+                  id="baja"
+                />Baja</label
+              >
+              <label for="prioridad"
+                ><input
+                  type="radio"
+                  value="media"
+                  name="prioridad"
+                  id="media"
+                />Media</label
+              >
+              <label for="prioridad"
+                ><input
+                  type="radio"
+                  value="alta"
+                  name="prioridad"
+                  id="alta"
+                />Alta</label
+              >
+            </div>
+            <div>
+              <label for="garantia">Garantia ampliada: </label>
+              <label for="garantia"
+                ><input
+                  type="radio"
+                  value="true"
+                  name="garantia"
+                  id="id-garantia"
+                />Si</label
+              >
+              <label for="garantia"
+                ><input
+                  type="radio"
+                  value="false"
+                  name="garantia"
+                  id="id-garantia"
+                />No</label
+              >
+            </div>
+          </div>
+        </article>
+        <aside>
+          <h3>Lista pedido</h3>
+          <div id="div-lista-pedido"></div>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
