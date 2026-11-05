@@ -18,7 +18,7 @@
         <article>
           <h3>Datos del solicitante</h3>
           <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" />
+          <input type="text" id="input-nombre" />
 
           <h3>Elige un producto</h3>
 
@@ -39,11 +39,11 @@
 
           <div id="div-adicionales">
             <div>
-              <label for="cantidad">Cantidad</label>
+              <label for="input-cantidad">Cantidad</label>
               <input
                 type="number"
                 name="adicionales"
-                id="cantidad"
+                id="input-cantidad"
                 min="1"
                 max="10"
               />
@@ -54,16 +54,16 @@
                 ><input
                   type="radio"
                   value="si"
-                  name="entrega"
-                  id="entrega-aula"
+                  name="entrega-aula"
+                  id="entrega-si"
                 />Si</label
               >
               <label for="entrega"
                 ><input
                   type="radio"
                   value="no"
-                  name="entrega"
-                  id="entrega-aula"
+                  name="entrega-aula"
+                  id="entrega-no"
                 />No</label
               >
             </div>
@@ -114,6 +114,7 @@
               >
             </div>
           </div>
+          <div><button id="btn-agregar-item">Añadir</button></div>
         </article>
         <aside>
           <h3>Lista pedido</h3>
