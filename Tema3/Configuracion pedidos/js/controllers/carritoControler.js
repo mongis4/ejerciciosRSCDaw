@@ -1,11 +1,26 @@
 export class CarritoControler {
-  pedidos = [];
+  static pedidos = [];
 
-  agregarPedido(datos) {
+  static agregarPedido(datos) {
     this.pedidos.push(datos);
   }
 
-  obtenerPedidos() {
+  static obtenerPedidos() {
     return this.pedidos;
+  }
+
+  static eliminarPedido(nombre) {
+    let indice = -1;
+    for (let i = 0; i < this.pedidos.length; i++) {
+      if (this.pedidos[i].pedido.item.nombre === nombre) {
+        indice = i;
+      }
+    }
+    if (indice === -1) {
+      return false;
+    } else {
+      this.pedidos.splice(indice, 1);
+      return true;
+    }
   }
 }

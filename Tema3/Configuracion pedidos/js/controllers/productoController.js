@@ -3,7 +3,7 @@ import { CarritoControler } from "./carritoControler.js";
 import { ProductoFactory } from "../patterns/factory/productoFactory.js";
 import { ConsultaRepository } from "../../js/repository/consultaRepository.js";
 
-const carritoControler = new CarritoControler();
+/* const carritoControler = new CarritoControler(); */
 
 export class ProductoController {
   procesarProducto(datos) {
@@ -17,6 +17,12 @@ export class ProductoController {
     pedido.setGarantiaAmpliada(datos.garantiaAmpliada);
     pedido.addObservaciones(datos.observaciones);
 
-    carritoControler.agregarPedido(pedido);
+    CarritoControler.agregarPedido(pedido);
+  }
+
+  eliminarProducto(nombre) {
+    if (!CarritoControler.eliminarPedido(nombre)) {
+      throw new Error("No se ha encontrado el artículo a eliminar");
+    }
   }
 }

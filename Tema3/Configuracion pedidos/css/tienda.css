@@ -47,7 +47,7 @@ img {
   width: 10vw;
 }
 
-img:hover {
+#div-productos img:hover {
   border: 2px solid green;
   cursor: pointer;
 }
@@ -67,8 +67,29 @@ img:hover {
 
 /* Lista carrito */
 
+#div-lista-pedido {
+  position: relative;
+}
+
 .item-cada-producto {
   display: flex;
   flex-direction: row;
-  border: 2px solid rgb(206, 55, 55);
+  border: 2px solid rgb(196, 132, 15);
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.item-cada-producto img {
+  max-width: 50px;
+  padding-right: 20px;
+}
+
+.id-eliminar {
+  position: absolute;
+  right: 15px;
+  top: -15px;
+  color: red;
+}
+.id-eliminar:hover {
+  cursor: pointer;
 }

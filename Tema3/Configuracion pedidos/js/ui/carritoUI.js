@@ -1,11 +1,11 @@
 import { CarritoControler } from "../controllers/carritoControler.js";
 
-const carritoControler = new CarritoControler();
+/* const carritoControler = new CarritoControler(); */
 
 export class CarritoUI {
   mostrarCarrito() {
     const contenedorListaPedido = document.getElementById("div-lista-pedido");
-    const pedidos = carritoControler.obtenerPedidos();
+    const pedidos = CarritoControler.obtenerPedidos();
 
     contenedorListaPedido.innerHTML = "";
 
@@ -13,12 +13,13 @@ export class CarritoUI {
       const elemento = document.createElement("div");
       elemento.innerHTML = `
                 <div>
-                    <img src="${p.item.producto.img}" alt="Imagen de producto" />
+                    <img src="${p.producto.img}" alt="Imagen de producto" />
                 </div>
                 <div>
-                    <p>${p.item.producto.categoria}/ ${p.item.producto.nombre}</p>
-                    <p><b>${p.item.producto.precio}</b></p>
+                    <p>${p.producto.categoria}/ ${p.producto.nombre}</p>
+                    <p><b>${p.producto.precio}</b></p>
                 </div>
+                <div class="id-eliminar" data-nombre="${p.producto.nombre}"><p>X</p></div>
             `;
       elemento.classList.add("item-cada-producto");
       contenedorListaPedido.appendChild(elemento);

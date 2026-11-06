@@ -32,5 +32,20 @@ botonAgregarItem.addEventListener("click", () => {
   const datos = producto.recogidaPedido();
   productoControler.procesarProducto(datos);
   carrito.mostrarCarrito();
-  document.getElementById("formulario-tienda")?.reset();
+  document.getElementById("formulario-tienda").reset();
+});
+
+const contenedorLista = document.getElementById("div-lista-pedido");
+
+contenedorLista.addEventListener("click", function (evento) {
+  let nombre = "";
+  const elemento = evento.target.closest(".id-eliminar");
+  if (!elemento) {
+    throw new Error("No se ha encontrado el artículo a eliminar");
+  }
+  if (elemento) {
+    nombre = elemento.dataset.nombre;
+    productoControler.eliminarProducto(nombre);
+    carrito.mostrarCarrito();
+  }
 });

@@ -1,6 +1,6 @@
-import { ProductoController } from "../controllers/productoController.js";
+/* import { ProductoController } from "../controllers/productoController.js";
 
-const productoControler = new ProductoController();
+const productoControler = new ProductoController(); */
 
 export class ProductoUI {
   recogidaPedido() {
@@ -28,6 +28,6 @@ export class ProductoUI {
       garantiaAmpliada: garantiaAmpliada,
     };
 
-    productoControler.procesarProducto(datos);
+    return datos;
   }
 }

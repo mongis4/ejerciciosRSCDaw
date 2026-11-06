@@ -10,6 +10,7 @@ export class ProductoFactory {
           producto.nombre,
           producto.precio,
           producto.categoria,
+          producto.img,
           producto.pulgadas,
         );
       case "Portatil":
@@ -17,6 +18,7 @@ export class ProductoFactory {
           producto.nombre,
           producto.precio,
           producto.categoria,
+          producto.img,
           producto.ram,
         );
       case "Periferico":
@@ -24,6 +26,7 @@ export class ProductoFactory {
           producto.nombre,
           producto.precio,
           producto.categoria,
+          producto.img,
           producto.tipoConexion,
         );
       default:
