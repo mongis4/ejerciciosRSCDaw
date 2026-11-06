@@ -6,7 +6,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="css/tienda.css" />
-    <script src="../techlab.js" defer></script>
+    <script type="module" src="js/ui/techlab.js" defer></script>
   </head>
   <body>
     <main>
@@ -14,6 +14,7 @@
         <h1>Techlab</h1>
         <h2>Tu tienda de productos informáticos</h2>
       </header>
+      <form id="formulario-tienda"></form>
       <section>
         <article>
           <h3>Datos del solicitante</h3>
@@ -23,9 +24,9 @@
           <h3>Elige un producto</h3>
 
           <div id="div-productos">
-            <div><img src="img/pc.png" alt="Pc" /></div>
+            <div><img src="img/pc.png" alt="Portatil"/></div>
             <div><img src="img/monitor.png" alt="Monitor" /></div>
-            <div><img src="img/perifericos.png" alt="Perifericos" /></div>
+            <div><img src="img/perifericos.png" alt="Periferico" /></div>
           </div>
           <label for="producto-elegido: ">Producto elegido: </label>
           <input
@@ -114,13 +115,14 @@
               >
             </div>
           </div>
-          <div><button id="btn-agregar-item">Añadir</button></div>
+          <div><button type="button" id="btn-agregar-item">Añadir</button></div>
         </article>
         <aside>
           <h3>Lista pedido</h3>
           <div id="div-lista-pedido"></div>
         </aside>
       </section>
+    </form>
     </main>
   </body>
 </html>

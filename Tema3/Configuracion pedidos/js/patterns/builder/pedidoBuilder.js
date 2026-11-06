@@ -1,4 +1,4 @@
-class construirPedido {
+export class PedidoBuilder {
   constructor(solicitante, producto) {
     this.solicitante = solicitante;
     this.producto = producto;
@@ -7,35 +7,23 @@ class construirPedido {
   /* Setters */
   addCantidad(cantidad) {
     this.cantidad = cantidad;
+    return this;
   }
   addPrioridad(prioridad) {
     this.prioridad = prioridad;
+    return this;
   }
   setEntregaEnAula(entregaEnAula) {
     this.entregaEnAula = entregaEnAula;
+    return this;
   }
   setGarantiaAmpliada(garantiaAmpliada) {
     this.garantiaAmpliada = garantiaAmpliada;
+    return this;
   }
 
   addObservaciones(observaciones) {
     this.observaciones = observaciones;
-  }
-
-  /* Getters */
-  getCantidad() {
-    return this.cantidad;
-  }
-  getPrioridad() {
-    return this.prioridad;
-  }
-  getEntregaEnAula() {
-    return this.entregaEnAula;
-  }
-  getGarantiaAmpliada() {
-    return this.garantiaAmpliada;
-  }
-  getObservaciones() {
-    return this.observaciones;
+    return this;
   }
 }
