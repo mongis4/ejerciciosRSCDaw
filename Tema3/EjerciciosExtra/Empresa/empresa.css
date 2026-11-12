@@ -1,0 +1,14 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#seccion-principal {
+  display: flex;
+  flex-direction: row;
+}
+
+#seccion-principal > section {
+  display: flex;
+  flex-direction: column;
+}

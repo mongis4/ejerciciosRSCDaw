@@ -1,0 +1,149 @@
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f2f0ee;
+  color: #222;
+}
+
+main {
+  max-width: 520px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== Tarjetas: el formulario y la sección ===== */
+form,
+section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Cada fila del formulario: elementos uno al lado del otro */
+form > div {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 12px;
+}
+
+form > div:last-child {
+  margin-bottom: 0;
+}
+
+/* Los labels del formulario ocupan el mismo ancho */
+form label {
+  flex: 1;
+  min-width: 0; /* evita que los inputs se salgan de la tarjeta */
+}
+
+form input,
+form select {
+  width: 100%;
+}
+
+/* ===== Labels: texto arriba, campo debajo ===== */
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+/* ===== Campos ===== */
+input,
+select {
+  font: inherit;
+  font-weight: normal;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #2f3e52;
+  border-color: transparent;
+}
+
+/* ===== Botones ===== */
+button {
+  font: inherit;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2f3e52;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #44597a;
+}
+
+#btn-vaciar {
+  background-color: crimson;
+}
+
+#btn-vaciar:hover {
+  background-color: #b0102e;
+}
+
+/* ===== Sección: filtro + botón vaciar en la misma fila ===== */
+section {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: end;
+}
+
+/* La lista, el total y los avisos ocupan las dos columnas */
+#id-lista,
+#id-total,
+#id-avisos {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+/* ===== Lista ===== */
+#id-lista {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid #eee;
+}
+
+#id-lista li {
+  padding: 8px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+#id-lista li:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* ===== Total y avisos ===== */
+#id-total {
+  text-align: right;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#id-avisos {
+  color: crimson;
+  font-weight: 600;
+}
+
+/* No ocupa espacio si no hay aviso */
+#id-avisos:empty {
+  display: none;
+}

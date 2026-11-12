@@ -1,0 +1,9 @@
+class Producto {
+  constructor(nombre, precio, categoria) {
+    this.nombre = nombre;
+    this.precio = precio;
+    this.categoria = categoria;
+  }
+}
+
+export { Producto };

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cambio longitud</title>
+    <script src="main.js" type="module" defer></script>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <main>
+      <div id="div-calculo">
+        <label for="distancia"
+          >Distancia <br /><input type="number" id="id-distancia"
+        /></label>
+        <label for="origen-tipo"
+          >De: <br /><select id="id-tipo-origen">
+            <option value="Kilometros">Kilometros</option>
+            <option value="Metros">Metros</option>
+            <option value="Millas">Millas</option>
+            <option value="Pies">Pies</option>
+            <option value="Yardas">Yardas</option>
+          </select></label
+        >
+        <label for="destino-tipo"
+          >De: <br /><select id="id-tipo-destino">
+            <option value="Kilometros">Kilometros</option>
+            <option value="Metros">Metros</option>
+            <option value="Millas">Millas</option>
+            <option value="Pies">Pies</option>
+            <option value="Yardas">Yardas</option>
+          </select></label
+        >
+        <div><button id="btn-convertir" type="button">Convertir</button></div>
+      </div>
+      <div id="div-historico">
+        <p id="errores"></p>
+        <div><h2>Histórico</h2></div>
+        <ul id="contenedor-historico"></ul>
+      </div>
+      <div>
+        <button id="btn-borrar-historico" type="button">
+          Borrar historico
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

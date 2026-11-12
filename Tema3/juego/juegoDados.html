@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torneo de dados</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Torneo de dados</h1>
+
+      <section>
+        <h2>Jugadores</h2>
+        <form id="form-jugador">
+          <label>
+            Nombre
+            <input type="text" id="input-nombre" autocomplete="off" />
+          </label>
+          <button type="submit" id="btn-anadir">Añadir</button>
+        </form>
+        <ul id="lista-jugadores"></ul>
+        <button type="button" id="btn-empezar" disabled>Empezar torneo</button>
+      </section>
+
+      <p id="mensaje"></p>
+
+      <section>
+        <h2>Ronda <span id="num-ronda">0</span></h2>
+        <button type="button" id="btn-ronda" disabled>Jugar ronda</button>
+        <button type="button" id="btn-nuevo">Nuevo torneo</button>
+        <ul id="ultima-ronda"></ul>
+      </section>
+
+      <section>
+        <h2>Clasificación</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Posición</th>
+              <th>Nombre</th>
+              <th>Puntos</th>
+              <th>Media por ronda</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-clasificacion"></tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

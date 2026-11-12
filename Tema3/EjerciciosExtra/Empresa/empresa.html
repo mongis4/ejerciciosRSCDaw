@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="empresa.css" />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header><h1>Empresa de reparto</h1></header>
+      <article id="seccion-principal">
+        <section>
+          <h2>Nuevo vehículo</h2>
+          <label>Nombre: <input type="text" id="id-nombre" /></label>
+          <label
+            >Tipo:
+            <select id="id-tipo-vehiculo-anadir">
+              <option value="" selected>-Select-</option>
+              <option value="Bicicleta">Bicicleta</option>
+              <option value="Moto">Moto</option>
+              <option value="Furgoneta">Furgoneta</option>
+            </select></label
+          >
+          <button type="button" id="btn-anadir">Añadir</button>
+        </section>
+        <section>
+          <h2>Simulador de entrega</h2>
+          <label>Vehículo: <select id="id-vehiculo-seleccionar">
+              <option value="" selected>-Select-</option>
+              <option value="Bicicleta">Bicicleta</option>
+              <option value="Moto">Moto</option>
+              <option value="Furgoneta">Furgoneta</option>
+            </select></label
+          >
+          <label>Origen: <select id="id-origen">
+              <option value="" selected>-Select-</option>
+              <option value="Almacen">Almacen</option>
+              <option value="Centro">Centro</option>
+              <option value="Puerto">Puerto</option>
+              <option value="Aeropuerto">Aeropuerto</option>
+            </select></label
+          ></label>
+            <label>Destino: <select id="id-destino">
+              <option value="" selected>-Select-</option>
+              <option value="Almacen">Almacen</option>
+              <option value="Centro">Centro</option>
+              <option value="Puerto">Puerto</option>
+              <option value="Aeropuerto">Aeropuerto</option>
+            </select></label
+          ></label>
+          <button type="button" id="btn-simular">Simular</button>
+          <p id="id-resultado"></p>
+        </section>
+      </article>
+      <article>
+        <h2>Vehiculos</h2>
+        <label>Buscar: <input type="text" id="input-buscar"></label>
+        <label>Tipo: <select id="id-filtro-tipo">
+              <option value="Todos" selected>Todos</option>
+              <option value="Bicicleta">Bicicleta</option>
+              <option value="Moto">Moto</option>
+              <option value="Furgoneta">Furgoneta</option>
+            </select></label
+          ></label>
+          <button type="button" id="btn-borrar">Borrar todos</button>
+          <ul id="id-lista"></ul>
+      </article>
+    </main>
+  </body>
+</html>

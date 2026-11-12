@@ -4,3 +4,10 @@ git add *
 git commit -m ""
 git push origin master
 
+
+
+descartar cambios locales y descargar lo que hay en el repositorio
+git checkout .
+
+despues 
+git pull

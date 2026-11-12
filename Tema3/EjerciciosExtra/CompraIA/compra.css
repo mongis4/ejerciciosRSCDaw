@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  background-color: #f2f0ee;
+}
+
+main {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+form > div,
+section > div {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 6px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #2f3e52;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+#id-avisos {
+  color: crimson;
+}
+
+#id-total {
+  font-weight: bold;
+}

@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f2f0ee;
+}
+
+header {
+  background-color: #2f3e52;
+  color: white;
+  padding: 10px 24px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: min(95vw, 900px);
+  margin: 20px auto;
+}
+
+/* Las dos secciones de arriba, una al lado de la otra */
+#seccion-principal {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+#seccion-principal > section {
+  flex: 1;
+}
+
+.tarjeta {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 6px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #2f3e52;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.cabecera-listado {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cabecera-listado h2 {
+  margin: 0 auto 0 0;
+}
+
+#id-resultado {
+  font-family: inherit;
+  white-space: pre-line; /* respeta los saltos de línea del resultado */
+}
+
+.error {
+  color: crimson;
+}
+
+.ok {
+  color: green;
+}

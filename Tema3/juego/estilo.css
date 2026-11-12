@@ -1,0 +1,43 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: #f2f0ee;
+}
+
+main {
+  width: min(90vw, 700px);
+}
+
+section {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 6px;
+  text-align: left;
+}
+
+#mensaje {
+  font-weight: bold;
+  min-height: 1.2em;
+}
+
+.error {
+  color: crimson;
+}
+
+.ganador {
+  color: green;
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empresa de reparto</title>
+    <link rel="stylesheet" href="empresa.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Empresa de reparto</h1>
+    </header>
+
+    <main>
+      <div id="seccion-principal">
+        <section class="tarjeta">
+          <h2>Nuevo vehículo</h2>
+          <form id="form-anadir">
+            <label>
+              Nombre
+              <input type="text" id="id-nombre" autocomplete="off" />
+            </label>
+            <label>
+              Tipo
+              <select id="id-tipo-vehiculo-anadir">
+                <option value="Bicicleta">Bicicleta</option>
+                <option value="Moto">Moto</option>
+                <option value="Furgoneta">Furgoneta</option>
+              </select>
+            </label>
+            <button type="submit">Añadir</button>
+          </form>
+          <p id="id-mensaje"></p>
+        </section>
+
+        <section class="tarjeta">
+          <h2>Simulador de entrega</h2>
+          <form id="form-simular">
+            <label>
+              Vehículo
+              <!-- Se rellena desde JS con los vehículos de la lista -->
+              <select id="id-vehiculo-seleccionar"></select>
+            </label>
+            <label>
+              Origen
+              <select id="id-origen"></select>
+            </label>
+            <label>
+              Destino
+              <select id="id-destino"></select>
+            </label>
+            <button type="submit">Simular</button>
+          </form>
+          <pre id="id-resultado"></pre>
+        </section>
+      </div>
+
+      <section class="tarjeta">
+        <div class="cabecera-listado">
+          <h2>Vehículos</h2>
+          <label>
+            Buscar
+            <input type="search" id="input-buscar" />
+          </label>
+          <label>
+            Tipo
+            <select id="id-filtro-tipo">
+              <option value="Todos">Todos</option>
+              <option value="Bicicleta">Bicicleta</option>
+              <option value="Moto">Moto</option>
+              <option value="Furgoneta">Furgoneta</option>
+            </select>
+          </label>
+          <button type="button" id="btn-borrar">Borrar todos</button>
+        </div>
+        <ul id="id-lista"></ul>
+      </section>
+    </main>
+  </body>
+</html>

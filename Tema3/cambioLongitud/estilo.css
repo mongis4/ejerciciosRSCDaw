@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 20px;
+  background-color: rgb(236, 232, 230);
+  max-width: 60vw;
+  min-width: 500px;
+}
+
+#div-calculo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 50px;
+  border-bottom: 1px solid grey;
+}
+
+#div-historico {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#btn-convertir {
+  background-color: rgb(65, 28, 65);
+  color: white;
+  padding: 6px;
+  border: 4px solid rgb(104, 39, 104);
+  cursor: pointer;
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de la compra</title>
+    <link rel="stylesheet" href="compra.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Lista de la compra</h1>
+      <form id="id-form" action="">
+        <div>
+          <label>Producto: <input type="text" id="id-producto" /></label>
+          <label>Precio: <input type="number" id="id-precio" step="0.01" /></label>
+        </div>
+        <div>
+          <label>
+            Categoria:
+            <!-- Se rellena desde JS con rellenarSelect -->
+            <select id="id-categoria"></select>
+          </label>
+          <button id="btn-anadir" type="button">Añadir</button>
+        </div>
+        <p id="id-avisos"></p>
+      </form>
+      <section>
+        <div>
+          <label>
+            Ver:
+            <select id="id-select-categoria">
+              <option value="Todas">Todas</option>
+              <option value="Alimentacion">Alimentacion</option>
+              <option value="Limpieza">Limpieza</option>
+              <option value="Bebidas">Bebidas</option>
+            </select>
+          </label>
+          <button id="btn-vaciar" type="button">Vaciar</button>
+        </div>
+        <ul id="id-lista"></ul>
+        <p id="id-total"></p>
+      </section>
+    </main>
+  </body>
+</html>

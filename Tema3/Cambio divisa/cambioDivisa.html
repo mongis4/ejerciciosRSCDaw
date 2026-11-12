@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="cambioDivisa.js" defer></script>
+    <link rel="stylesheet" href="estiloCambioDivisa.css" />
+  </head>
+  <body>
+    <main>
+      <div id="div-calculo">
+        <label for="Importe"
+          >Importe <br /><input type="number" id="id-importe" value="20"
+        /></label>
+        <label for="Importe"
+          >De: <br /><select id="id-moneda-origen">
+            <option value="Euros">Euros</option>
+            <option value="Libras">Libras</option>
+            <option value="Dolares">Dolares</option>
+          </select></label
+        >
+        <label for="Importe"
+          >a: <br /><select id="id-moneda-destino">
+            <option value="Euros">Euros</option>
+            <option value="Libras">Libras</option>
+            <option value="Dolares">Dolares</option>
+          </select></label
+        >
+        <div><button id="btn-cambiar" type="button">Cambiar</button></div>
+      </div>
+      <div id="div-historico">
+        <div><h2>Histórico</h2></div>
+        <div id="contenedor-historico"></div>
+      </div>
+    </main>
+  </body>
+</html>
